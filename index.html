@@ -8,21 +8,58 @@
 body { font-family: Arial; background:#f7f9fc; text-align:center; padding:40px; }
 h1 { color:#333; }
 form { background:white; display:inline-block; padding:25px 40px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); max-width:400px; width:100%; }
-input, textarea, button { margin-top:10px; width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; }
-button { background:#0078D7; color:white; font-size:16px; cursor:pointer; }
+input, select, textarea, button { margin-top:10px; width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; }
+button { background:#0078D7; color:white; font-size:16px; cursor:pointer; border:none; }
 button:hover { background:#005fa3; }
 </style>
 </head>
 <body>
 <h1>PEA 2025 Nomination Form</h1>
 <p>Fill out this form to nominate your favorite entertainers.</p>
-<form>
-<input type="text" name="nominee" placeholder="Nominee's Name" required><br>
-<input type="text" name="category" placeholder="Category (e.g., Best Artist)" required><br>
-<input type="text" name="nominator" placeholder="Your Name" required><br>
-<input type="email" name="email" placeholder="Your Email" required><br>
-<textarea name="reason" placeholder="Why are you nominating this person?" rows="4" required></textarea><br>
-<button type="submit">Submit Nomination</button>
+
+<form action="https://formspree.io/f/yourformid" method="POST">
+  <input type="text" name="nominee" placeholder="Nominee's Name" required>
+  
+  <select name="category" required>
+    <option value="">Select Category</option>
+    <option value="Best Male Artist">Best Male Artist</option>
+    <option value="Best Female Artist">Best Female Artist</option>
+    <option value="Best Group">Best Group</option>
+    <option value="Best Song">Best Song</option>
+    <option value="Best Album">Best Album</option>
+    <option value="Best Collaboration">Best Collaboration</option>
+    <option value="Best Music Video">Best Music Video</option>
+    <option value="Best New Artist">Best New Artist</option>
+    <option value="Best Actor">Best Actor</option>
+    <option value="Best Actress">Best Actress</option>
+    <option value="Best Movie">Best Movie</option>
+    <option value="Best TV Show">Best TV Show</option>
+    <option value="Best Comedian">Best Comedian</option>
+    <option value="Best Radio Personality">Best Radio Personality</option>
+    <option value="Best DJ">Best DJ</option>
+    <option value="Best Podcast">Best Podcast</option>
+    <option value="Best Influencer">Best Influencer</option>
+    <option value="Best Dancer">Best Dancer</option>
+    <option value="Best Director">Best Director</option>
+    <option value="Best Producer">Best Producer</option>
+    <option value="Best Songwriter">Best Songwriter</option>
+    <option value="Best Fashion Designer">Best Fashion Designer</option>
+    <option value="Best Event Planner">Best Event Planner</option>
+    <option value="Best Photographer">Best Photographer</option>
+    <option value="Best Stylist">Best Stylist</option>
+    <option value="Best Entrepreneur">Best Entrepreneur</option>
+    <option value="Best Blogger">Best Blogger</option>
+    <option value="Best Athlete">Best Athlete</option>
+    <option value="Best Motivational Speaker">Best Motivational Speaker</option>
+    <option value="Best Philanthropist">Best Philanthropist</option>
+    <option value="Lifetime Achievement">Lifetime Achievement</option>
+  </select>
+
+  <input type="text" name="nominator" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="reason" placeholder="Why are you nominating this person?" rows="4" required></textarea>
+  <button type="submit">Submit Nomination</button>
 </form>
+
 </body>
 </html>
