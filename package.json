@@ -2,16 +2,23 @@
   "name": "pea-2025",
   "version": "1.0.0",
   "private": true,
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  },
+  "browserslist": "[\">0.2%\", \"not dead\", \"not op_mini all\"]",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "deploy": "gh-pages -d out -b gh-pages -r https://github.com/jabathykini-hub/PEA2025.git"
+    "build": "react-scripts build",
+    "export": "mv build dist",
+    "start": "react-scripts start",
+    "deploy": "gh-pages -d dist -b gh-pages -r https://github.com/jabathykini-hub/PEA2025.git"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "gh-pages": "6.1.1"
+    "gh-pages": "^6.1.1",
+    "next": "^12.3.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.1"
   }
 }
