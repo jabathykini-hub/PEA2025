@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "deploy": "gh-pages -d out -b gh-pages -r https://github.com/jabathykini-hub/PEA2025.git"
   },
   "dependencies": {
-    "next": "15.5.4",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "gh-pages": "^6.5.0"
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "gh-pages": "6.1.1"
   }
 }

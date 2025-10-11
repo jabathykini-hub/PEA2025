@@ -42,6 +42,9 @@ export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!selectedCategory || !nomineeName) return alert("Please select a category and enter a name.");
+
+    // This data would be sent to a backend server here in a real application.
+    console.log(`Nomination Submitted: Category=${selectedCategory}, Nominee=${nomineeName}`);
     setSubmitted(true);
     setTimeout(() => {
       setSelectedCategory("");
