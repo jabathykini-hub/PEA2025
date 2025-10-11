@@ -13,7 +13,7 @@ export default function Home() {
     "Collaboration of the Year",
     "Afro Pop Artist",
     "Hipco Artist Song of the Year",
-    "Song Of the Year",
+    "Song of the Year",
     "Dance Crew of the Year",
     "Best Gospel Artist of the Year",
     "Actor of the Year",
@@ -58,13 +58,21 @@ export default function Home() {
         <label><b>Select Category:</b></label><br/>
         <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} style={{ width: "100%", padding: "10px", marginTop: "5px", marginBottom: "15px" }}>
           <option value="">-- Choose a Category --</option>
-          {categories.map((cat, i) => (<option key={i} value={cat}>{cat}</option>))}
+          {categories.map((cat, i) => (
+            <option key={i} value={cat}>{cat}</option>
+          ))}
         </select>
+
         <label><b>Nominee Name:</b></label><br/>
         <input type="text" value={nomineeName} onChange={(e) => setNomineeName(e.target.value)} placeholder="Enter nominee's name" style={{ width: "100%", padding: "10px", marginTop: "5px", marginBottom: "15px" }} />
-        <button type="submit" style={{ width: "100%", padding: "12px", backgroundColor: "#0070f3", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "16px" }}>Submit Nomination</button>
-        {submitted && (<p style={{ marginTop: "15px", color: "green", fontWeight: "bold" }}>✅ Thank you! Your nomination has been submitted.</p>)}
+
+        <button type="submit" style={{ width: "100%", padding: "12px", backgroundColor: "#0070f3", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer", fontSize: "16px" }}>
+          Submit Nomination
+        </button>
+
+        {submitted && <p style={{ marginTop: "15px", color: "green", fontWeight: "bold" }}>✅ Thank you! Your nomination has been submitted.</p>}
       </form>
+
       <p style={{ marginTop: "40px" }}>Powered by <b>Paynesville Entertainment Awards (PEA) 2025–2026</b>.</p>
     </div>
   );
